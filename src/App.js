@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
-
+import Form from './Form.js'
 
 class App extends Component {
   constructor(props) {
@@ -20,6 +20,7 @@ class App extends Component {
       <header>
         <h1>REDACTOR</h1>
       </header>
+      <Form />
     </div>
   );
 }
