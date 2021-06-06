@@ -1,20 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import React, { Component } from 'react';
 import Form from './Form.js'
 
-class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      replacementText: 'XXXX',
-      documentText: '',
-      userInput: '',
-      editedDoc: '',
-  }
-}
+const App = () => {
 
-  render() {
     return (
     <div className="App">
       <header>
@@ -24,6 +13,6 @@ class App extends Component {
     </div>
   );
 }
-}
+
 
 export default App;
