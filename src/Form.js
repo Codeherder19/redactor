@@ -12,6 +12,10 @@ class Form extends Component {
     };
   }
 
+    handleValueChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
 render() {
   return (
   <form>
@@ -19,15 +23,21 @@ render() {
       <h2>Redactions:</h2>
       <input
         className='userInput'
+        name='userInput'
         type= 'text'
         placeholder='Keywords and phrases to redact'
         title='Keywords and phrases to redact'
+        value={this.state.userInput}
+        onChange={e => this.handleValueChange(e)}
       />
       <h3>Original Document:</h3>
-      <input
+      <textarea
         className='document'
+        name='documentText'
         type= 'text'
         title='Document'
+        value={this.state.documentText}
+        onChange={e => this.handleValueChange(e)}
       />
     </div>
   </form>
