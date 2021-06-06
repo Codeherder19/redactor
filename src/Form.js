@@ -15,16 +15,21 @@ class Form extends Component {
 render() {
   return (
   <form>
-    <input
-      type= 'text'
-      placeholder='Keywords and phrases to redact'
-      title='Keywords and phrases to redact'
-    />
-    <input
-      type= 'text'
-      placeholder='Document'
-      title='Document'
-    />
+    <div className='input-container'>
+      <h2>Redactions:</h2>
+      <input
+        className='userInput'
+        type= 'text'
+        placeholder='Keywords and phrases to redact'
+        title='Keywords and phrases to redact'
+      />
+      <h3>Original Document:</h3>
+      <input
+        className='document'
+        type= 'text'
+        title='Document'
+      />
+    </div>
   </form>
 )
 }
