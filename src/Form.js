@@ -21,7 +21,7 @@ class Form extends Component {
     console.log(match)
     match.forEach(item => {
       let updatedString = item.replace(/"/g,"")
-      newDocument = newDocument.replace(updatedString, this.state.replacementText)
+      newDocument = newDocument.replaceAll(updatedString, this.state.replacementText)
     })
     console.log(newDocument)
     this.props.updateDoc(event, newDocument)
