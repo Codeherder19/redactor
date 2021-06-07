@@ -54,7 +54,7 @@ render() {
         onChange={e => this.handleValueChange(e)}
       />
       <div className='button-container'>
-      <button type='submit' onClick={(event) => this.redactDocument(event)}>Submit
+      <button className='submit-button' type='submit' onClick={(event) => this.redactDocument(event)}>Submit
       </button>
       </div>
     </div>
