@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Redactor
+
+## Overview
+This application was a technical challenge given to me as part of the interview process for a position at Meltwater. The application's purpose is to take a document and replace instances of keywords and/or phrases with XXXX. To use this application, you may begin by typing keywords and phrases in the first input. Phrases should be wrapped in double quotes. Phrases and keywords may be separated either by commas, or spaces. Next, type in a document text in the box that contains some of the keywords and phrases you wish to redact. When you click the submit button, you should see an updated document with the keywords and phrases replaced with XXXX.
+
+Example:
+
+Keywords and Phrases: "Peter Piper", "pickled peppers", purple, patch, people
+
+Document text: Peter Piper picked a pack of pickled peppers while pacing through a patch of purple people eaters.
+
+Redacted document: XXXX picked a pack of XXXX while pacing through a XXXX of XXXX XXXX eaters.
+
+## Technologies
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tests were done using Cypress.io.
 
-## Available Scripts
+## Architecture
 
-In the project directory, you can run:
+Redactor is built with React and is controlled by three main JavaScript files: 
+  - ```App.js``` contains all other elements
+  - ```Form.js``` displays the input and textarea elements where a user can type in keywords and phrases, and a document text, respectively.
+  - ```RedactedDoc.js``` displays the original document with instances of keywords and phrases each replaced with XXXX when the submit button is clicked.
 
-### `npm start`
+## Getting Started
+### Clone this repo
+run ```git clone git@github.com:Codeherder19/redactor.git```
+### Install dependencies
+run ```npm install```
+### Start your application
+run ``` npm start```
+### Open application
+Navigate to ```localHost:3000```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Contributors
+[Brian Forbes](https://github.com/Codeherder19)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Iterations
+- Modify regex statement to match phrases between single quotes as well as double quotes
+- Account for case sensitivity of keywords and phrases
+- Add more CSS styling
+- Refactor code so the reset button returns you to the Form component without clearing the user inputs.
