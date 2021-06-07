@@ -21,7 +21,7 @@ class Form extends Component {
     console.log(match)
     match.forEach(item => {
       let updatedString = item.replace(/"/g,"")
-      newDocument = newDocument.replace(updatedString, this.state.replacementText)
+      newDocument = newDocument.replaceAll(updatedString, this.state.replacementText)
     })
     console.log(newDocument)
     this.props.updateDoc(event, newDocument)
@@ -54,7 +54,7 @@ render() {
         onChange={e => this.handleValueChange(e)}
       />
       <div className='button-container'>
-      <button type='submit' onClick={(event) => this.redactDocument(event)}>Submit
+      <button className='submit-button' type='submit' onClick={(event) => this.redactDocument(event)}>Submit
       </button>
       </div>
     </div>

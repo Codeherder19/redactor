@@ -25,10 +25,10 @@ class App extends Component {
         {!this.state.redactedDoc &&
         <Form updateDoc={this.updateDoc}/>}
         {this.state.redactedDoc &&
-          <>
-        <RedactedDoc text={this.state.redactedDoc}/>
-        <button onClick={() => this.setState({redactedDoc: ''})}>Reset</button>
-        </>
+        <form className='output-container'>
+          <RedactedDoc text={this.state.redactedDoc}/>
+          <button className='reset-button' onClick={() => this.setState({redactedDoc: ''})}>Reset</button>
+        </form>
         }
       </div>
     );
